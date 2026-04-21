@@ -101,7 +101,22 @@ You can use this system to build:
 
 👉 Start your poker business faster
 
----
+## 🚀 Get Started Now
+
+💬 Contact now to get full source code & demo  
+💬 获取完整源码请联系  
+💬 獲取完整源碼請聯絡  
+
+👉 Start your poker business today  
+👉 今天开始你的德州业务  
+👉 今天開始你的德州業務  
+## 📞 Contact | 联系方式 | 聯絡方式
+
+* Telegram: @fox_lovemyself
+* Email:zyue02561@gmail.com
+
+💬 Fast response within 24h
+
 
 ## 📸 Screenshots | 项目展示 | 專案展示
 
@@ -130,21 +145,6 @@ https://github.com/niubideren111/Poker-Club
 https://github.com/niubideren111/Texas-Hold-em-source-code
 
 ---
-## 🚀 Get Started Now
-
-💬 Contact now to get full source code & demo  
-💬 获取完整源码请联系  
-💬 獲取完整源碼請聯絡  
-
-👉 Start your poker business today  
-👉 今天开始你的德州业务  
-👉 今天開始你的德州業務  
-## 📞 Contact | 联系方式 | 聯絡方式
-
-* Telegram: @fox_lovemyself
-* Email:zyue02561@gmail.com
-
-💬 Fast response within 24h
 
 ---
 
