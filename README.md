@@ -57,12 +57,12 @@ make -j$(nproc)
 * ✅ Stable game server ｜ 稳定服务端 ｜ 穩定服務端
 * ✅ Scalable architecture ｜ 可扩展 ｜ 可擴展
 * ✅ High-performance engine ｜ 高性能引擎 ｜ 高效能引擎
-模块主要功能金币大厅快速匹配、多级别桌、坐满即玩、
-每日比赛俱乐部/私人局好友约局、俱乐部管理、战绩统计、联盟系统
-锦标赛系统SNG、MTT、多桌锦标赛、赏金赛特色玩法
-经典德州、短牌、奥马哈等社交系统
-语音聊天、好友系统、表情互动
-安全与日志服务器反作弊、完整行为日志、数据分析
+* ✅模块主要功能金币大厅快速匹配、多级别桌、坐满即玩、
+* ✅每日比赛俱乐部/私人局好友约局、俱乐部管理、战绩统计、联盟系统
+* ✅锦标赛系统SNG、MTT、多桌锦标赛、赏金赛特色玩法
+* ✅经典德州、短牌、奥马哈等社交系统
+* ✅语音聊天、好友系统、表情互动
+* ✅安全与日志服务器反作弊、完整行为日志、数据分析
 ## 💰 Commercial Features | 商业能力 | 商業能力
 
 - ✔ Payment & recharge system（充值系统）  
@@ -70,8 +70,8 @@ make -j$(nproc)
 - ✔ Multi-currency support（多货币支持）  
 - ✔ Referral / agent system（代理体系）  
 - ✔ Player interaction & chat（互动聊天） 
-
-###🛠 技术架构
+---
+##🛠 技术架构
 
 服务端：C++ 高并发框架（WebSocket）
 客户端：Unity 2019+（C#），支持 Android / iOS / PC
@@ -80,22 +80,22 @@ make -j$(nproc)
 通信协议：WebSocket（二进制/JSON 可选）
 
 
-###🔧 二次开发建议
+##🔧 二次开发建议
 
-性能优化：
+ ** 性能优化： **
 扑克手牌评估使用位运算或查表法（取代朴素枚举）
 网络层使用对象池 + 零拷贝序列化（flatbuffers / protobuf）
 热点函数添加缓存（如胜率预计算）
 
-代码结构：
+ **代码结构： **
 将 OrderServantImp.cpp 中的命令处理拆分为独立 Handler
 引入状态机管理牌局流程（PreFlop → Flop → Turn → River → Showdown）
 
-安全性：
+ **安全性： **
 加强随机数生成（使用 /dev/urandom 或硬件 RNG）
 所有客户端上报行为必须服务端校验
 
-扩展性：
+ **扩展性： **
 抽象 GameRule 接口，便于快速接入新扑克变体
 
 
@@ -103,11 +103,11 @@ make -j$(nproc)
 
 ###📈 未来路线图
 
- 完善 SNG/MTT 完整锦标赛流程
- 支持更多扑克变体（奥马哈 Hi/Lo 等）
- 分布式部署与 Redis Cluster 集成
- WebGL / HTML5 客户端示例
- 更完善的后台管理系统
+  **完善 SNG/MTT 完整锦标赛流程**
+  **支持更多扑克变体（奥马哈 Hi/Lo 等） **
+ ** 分布式部署与 Redis Cluster 集成 **
+ ** WebGL / HTML5 客户端示例 **
+ ** 更完善的后台管理系统 **
 
 ## 📞 Contact | 联系方式 | 聯絡方式
 
