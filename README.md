@@ -1,4 +1,4 @@
-# 🃏 德州扑克源码 |  | 德州撲克遊戲源碼Texas Hold'em Poker Source Code
+# 🃏 德州扑克源码|德州撲克遊戲源碼|Texas Hold'em Poker Source Code
 
 **高并发实时多人德州扑克服务器引擎**（C++ + WebSocket + Unity）
 
@@ -41,7 +41,7 @@
 git clone https://github.com/niubideren111/Texas-Hold-em-source-code.git
 cd Texas-Hold-em-source-code
 docker-compose up -d
-
+---
 源码编译运行（Linux）
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
