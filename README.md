@@ -47,16 +47,29 @@ mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$(nproc)
 ./poker_server
-
 ---
-###🎮 核心功能
 
+## ✨ Features | 核心功能 | 功能特色
+
+* ✅ Texas Hold'em gameplay ｜ 德州玩法 ｜ 德州玩法
+* ✅ Multiplayer real-time ｜ 实时对战 ｜ 即時對戰
+* ✅ Table management ｜ 牌桌管理 ｜ 牌桌管理
+* ✅ Stable game server ｜ 稳定服务端 ｜ 穩定服務端
+* ✅ Scalable architecture ｜ 可扩展 ｜ 可擴展
+* ✅ High-performance engine ｜ 高性能引擎 ｜ 高效能引擎
 模块主要功能金币大厅快速匹配、多级别桌、坐满即玩、
 每日比赛俱乐部/私人局好友约局、俱乐部管理、战绩统计、联盟系统
 锦标赛系统SNG、MTT、多桌锦标赛、赏金赛特色玩法
 经典德州、短牌、奥马哈等社交系统
 语音聊天、好友系统、表情互动
 安全与日志服务器反作弊、完整行为日志、数据分析
+## 💰 Commercial Features | 商业能力 | 商業能力
+
+- ✔ Payment & recharge system（充值系统）  
+- ✔ Multi-language support（多语言支持）  
+- ✔ Multi-currency support（多货币支持）  
+- ✔ Referral / agent system（代理体系）  
+- ✔ Player interaction & chat（互动聊天） 
 
 ###🛠 技术架构
 
@@ -133,57 +146,6 @@ make -j$(nproc)
 ---
 
 
-
----
-
-## 💰 Business Use | 商业用途 | 商業用途
-
-You can use this system to build:
-
-* Online poker game platform ｜ 德州游戏平台 ｜ 德州遊戲平台
-* Poker club system ｜ 俱乐部系统 ｜ 俱樂部系統
-* Casino game system ｜ 博弈系统 ｜ 博弈系統
-
-💡 Monetization / 盈利方式：
-
-* Game rake（抽水）
-* Recharge（充值）
-* Membership（会员）
-
-👉 Turn this into a real profitable business
-
----
-
-## ✨ Features | 核心功能 | 功能特色
-
-* ✅ Texas Hold'em gameplay ｜ 德州玩法 ｜ 德州玩法
-* ✅ Multiplayer real-time ｜ 实时对战 ｜ 即時對戰
-* ✅ Table management ｜ 牌桌管理 ｜ 牌桌管理
-* ✅ Stable game server ｜ 稳定服务端 ｜ 穩定服務端
-* ✅ Scalable architecture ｜ 可扩展 ｜ 可擴展
-* ✅ High-performance engine ｜ 高性能引擎 ｜ 高效能引擎
-
-## 💰 Commercial Features | 商业能力 | 商業能力
-
-- ✔ Payment & recharge system（充值系统）  
-- ✔ Multi-language support（多语言支持）  
-- ✔ Multi-currency support（多货币支持）  
-- ✔ Referral / agent system（代理体系）  
-- ✔ Player interaction & chat（互动聊天）  
-
-
-
-
-
-
----
-
-## ⚠️ Disclaimer | 声明 | 聲明
-
-For educational purposes only.
-请遵守当地法律法规。
-
----
 
 ## 🔍 SEO Keywords
 
