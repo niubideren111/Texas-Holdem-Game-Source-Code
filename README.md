@@ -37,11 +37,11 @@
 
 ### Docker 一键部署（推荐）
 
-```bash
+
 git clone https://github.com/niubideren111/Texas-Hold-em-source-code.git
 cd Texas-Hold-em-source-code
 docker-compose up -d
----
+
 源码编译运行（Linux）
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
