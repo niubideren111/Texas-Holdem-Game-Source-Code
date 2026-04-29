@@ -79,15 +79,15 @@ make -j$(nproc)
 部署：Docker + docker-compose，支持水平扩展
 通信协议：WebSocket（二进制/JSON 可选）
 
-
+---
 ##🔧 二次开发建议
 
- ** 性能优化： **
+ 性能优化： 
 扑克手牌评估使用位运算或查表法（取代朴素枚举）
 网络层使用对象池 + 零拷贝序列化（flatbuffers / protobuf）
 热点函数添加缓存（如胜率预计算）
 
- **代码结构： **
+ 代码结构： 
 将 OrderServantImp.cpp 中的命令处理拆分为独立 Handler
 引入状态机管理牌局流程（PreFlop → Flop → Turn → River → Showdown）
 
@@ -95,7 +95,7 @@ make -j$(nproc)
 加强随机数生成（使用 /dev/urandom 或硬件 RNG）
 所有客户端上报行为必须服务端校验
 
- **扩展性： **
+ 扩展性： 
 抽象 GameRule 接口，便于快速接入新扑克变体
 
 
