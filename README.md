@@ -1,4 +1,4 @@
-# 🃏 德州扑克源码|德州撲克遊戲源碼|德州俱乐部|德州私人局|德州俱乐部|德州源码|Texas Hold'em Poker Source Code|
+# 🃏 德州私人局源码(德州扑克源码)|德州撲克遊戲源碼|德州源码|Texas Hold'em Poker Source Code
 
 **高并发实时多人德州扑克服务器引擎**（C++ + WebSocket + Unity）
 
@@ -109,12 +109,11 @@ make -j$(nproc)
   *  WebGL / HTML5 客户端示例 
  *  更完善的后台管理系统 
 
-## 📞 Contact | 联系方式 | 聯絡方式
+## 项目咨询
 
-* Telegram: @fox_lovemyself
-* Email:zyue02561@gmail.com
+- Telegram：[fox_lovemyself](https://t.me/fox_lovemyself)
+- GitHub：[德州私人局与朋友局源码](https://github.com/niubideren111/Texas-Hold-em-source-code)
 
-💬 Fast response within 24h
 
 
 ## 📸 Screenshots | 项目展示 | 專案展示
@@ -134,9 +133,39 @@ make -j$(nproc)
 <img width="1280" height="720" alt="02" src="https://github.com/user-attachments/assets/29778d21-4da2-4d26-a95d-ddfc645aa64c" />
 
 ---
+## 技术结构与阅读路径
+
+- **产品层**：围绕私人局、朋友局和俱乐部牌桌的德州扑克代码资料。公开仓库包含 Unity 登录与大厅场景、C++ 订单和路由服务文件、配置示例，以及牌局流程图与产品截图。
+- **实现层**：公开文件按实际语言和目录组织，可从下方入口开始阅读。
+
+## 获取仓库
+
+```bash
+git clone https://github.com/niubideren111/Texas-Hold-em-source-code.git
+cd Texas-Hold-em-source-code
+```
+
+克隆后从上面的文件入口开始阅读。若需要运行示例，请先核对项目中实际存在的依赖、版本、配置和启动脚本。
+
+## 常见问题
+
+### 与俱乐部源码项目如何选择？
+本项目突出私人牌桌、朋友组局、Unity 场景和玩法流程；另一项目突出俱乐部服务接口与构建资料。
+
+### 是否提供 Docker 一键启动？
+当前公开文件中没有完整的 Docker Compose 部署工程，本页不提供一键启动承诺。
+
+## 资料范围与准确性
+
+本 README 将**产品展示、公开源码和项目交付**分开描述。公开仓库中没有出现的客户端、服务器、数据库、后台、支付或部署能力，不在此处作出已实现承诺；需要验收时，应以具体文件、版本和运行记录为准。
 
 
-欢迎技术交流、部署咨询或合作讨论。
+## 相关项目
+
+- [dezhou-poker-club-source-code](https://github.com/niubideren111/dezhou-poker-club-source-code)
+- [Texas-Holdem-Game-Source-Code](https://github.com/niubideren111/Texas-Holdem-Game-Source-Code)
+
+
 
 📄 许可证
 本项目采用 MIT License 开源。
