@@ -1,7 +1,12 @@
-# 🃏 德州私人局源码(德州扑克源码)|德州撲克遊戲源碼|德州源码|Texas Hold'em Poker Source Code
+# 德州扑克源码（德州源码）｜金币大厅、多玩法与 Unity UI 资料|Texas Hold'em Poker Source Code
 
-**高并发实时多人德州扑克服务器引擎**（C++ + WebSocket + Unity）
+> 中文简体 · 中文繁體 · English 多语言产品与源码资料
 
+[简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [产品页面](https://niubideren111.github.io/Texas-Holdem-Game-Source-Code/zh-cn/)
+
+以金币大厅和多玩法入口为主题的德州扑克项目资料，展示登录、SNG 选场和宝箱等界面。公开代码包含 Unity C# 与 Lua UI 适配器、签名工具和服务器异步回调片段。
+
+**德州扑克源码 · 德州源码 · 德州金币大厅源码 · Unity扑克源码**
 支持经典德州、短牌、奥马哈等多种玩法，包含私人局、朋友局、俱乐部/联盟、SNG、MTT 等模式。
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -80,26 +85,7 @@ make -j$(nproc)
 通信协议：WebSocket（二进制/JSON 可选）
 
 ---
-##🔧 二次开发建议
 
-*  性能优化： 
-* 扑克手牌评估使用位运算或查表法（取代朴素枚举）
-* 网络层使用对象池 + 零拷贝序列化（flatbuffers / protobuf）
-* 热点函数添加缓存（如胜率预计算）
-
-*  代码结构： 
-* 将 OrderServantImp.cpp 中的命令处理拆分为独立 Handler
-* 引入状态机管理牌局流程（PreFlop → Flop → Turn → River → Showdown）
-
- * 安全性： 
-* 加强随机数生成（使用 /dev/urandom 或硬件 RNG）
-* 所有客户端上报行为必须服务端校验
-
-*  扩展性： 
-* 抽象 GameRule 接口，便于快速接入新扑克变体
-
-
-* 欢迎提交 Issue 和 Pull Request 共同完善！
 
 ###📈 未来路线图
 
@@ -119,14 +105,21 @@ make -j$(nproc)
 ## 📸 Screenshots | 项目展示 | 專案展示
 
 ![德州扑克金币大厅宝箱活动界面](docs/assets/seo/texas-holdem-game-source-code-01.jpg)
+
 ![德州扑克 SNG 选场与买入档位](docs/assets/seo/texas-holdem-game-source-code-02.jpg)
+
 ![德州扑克手机号登录界面](docs/assets/seo/texas-holdem-game-source-code-03.jpg)
 
 ---
-## 技术结构与阅读路径
+## 公开源码与资料
 
-- **产品层**：围绕私人局、朋友局和俱乐部牌桌的德州扑克代码资料。公开仓库包含 Unity 登录与大厅场景、C++ 订单和路由服务文件、配置示例，以及牌局流程图与产品截图。
-- **实现层**：公开文件按实际语言和目录组织，可从下方入口开始阅读。
+| 文件 | 说明 |
+|---|---|
+| [LuaOSAListAdapter.cs](LuaOSAListAdapter.cs) | Lua 列表适配器 |
+| [LuaOSATableAdapter.cs](LuaOSATableAdapter.cs) | Lua 表格适配器 |
+| [LuaUIObject.cs](LuaUIObject.cs) | Lua UI 对象桥接 |
+| [SignatureTool.cs](SignatureTool.cs) | 签名工具类 |
+| [external/AsyncLoginCallback.cpp](external/AsyncLoginCallback.cpp) | 服务端登录回调片段 |
 
 ## 获取仓库
 
@@ -139,51 +132,28 @@ cd Texas-Hold-em-source-code
 
 ## 常见问题
 
-### 与俱乐部源码项目如何选择？
-本项目突出私人牌桌、朋友组局、Unity 场景和玩法流程；另一项目突出俱乐部服务接口与构建资料。
+### 本项目与私人局项目有何不同？
 
-### 是否提供 Docker 一键启动？
-当前公开文件中没有完整的 Docker Compose 部署工程，本页不提供一键启动承诺。
+本页突出金币大厅、玩法选择和 Unity UI 代码；私人局项目侧重组局、俱乐部牌桌和场景资料。
 
-## 资料范围与准确性
+### 从哪个文件了解客户端界面？
 
-本 README 将**产品展示、公开源码和项目交付**分开描述。公开仓库中没有出现的客户端、服务器、数据库、后台、支付或部署能力，不在此处作出已实现承诺；需要验收时，应以具体文件、版本和运行记录为准。
+从 LuaUIObject.cs 入手，再阅读列表和表格适配器，了解 C# 与 Lua 界面的连接方式。
 
+## 后续资料完善方向
+
+补充登录到大厅的流程图、玩法入口截图、UI 适配器用法和 Unity 版本说明；独立列出 SNG/MTT 的实现范围。 后续更新还应加入版本化依赖清单、经过验证的构建或导入步骤、简明架构/产品流程图，以及能对应真实文件变化的版本记录。大型授权资源可放入 GitHub Releases 并提供校验值，不能提交密钥、生产地址或用户数据。
 
 ## 相关项目
 
+- [Texas-Hold-em-source-code](https://github.com/niubideren111/Texas-Hold-em-source-code)
 - [dezhou-poker-club-source-code](https://github.com/niubideren111/dezhou-poker-club-source-code)
-- [Texas-Holdem-Game-Source-Code](https://github.com/niubideren111/Texas-Holdem-Game-Source-Code)
+- [Texas-Hold-em-Tournament-Source-Code](https://github.com/niubideren111/Texas-Hold-em-Tournament-Source-Code)
 
+## 资料范围与许可
 
+公开仓库提供 UI 适配代码、工具类、服务器回调片段及产品截图；完整客户端、服务端和数据配置通过项目联系方式沟通。 公开内容以实际文件、依赖和许可为准，不承诺搜索排名、直接上线或固定性能结果。
 
-📄 许可证
-本项目采用 MIT License 开源。
-再次强调：请合法合规使用，禁止用于真实赌博。
-
-
----
-
-
-
-## 🔍 SEO Keywords
-
-texas holdem source code
-poker game source code
-online poker game
-multiplayer poker game
-casino game system
-德州扑克源码
-德州游戏源码
-棋牌游戏源码
-德州撲克源碼
-## 🔍 More Keywords
-
-poker platform source code  
-real money poker system  
-texas holdem online game  
-multiplayer poker engine  
-poker server architecture  
-online poker platform  
-
+- Telegram: [@fox_lovemyself](https://t.me/fox_lovemyself)
+- GitHub: [Texas-Holdem-Game-Source-Code](https://github.com/niubideren111/Texas-Holdem-Game-Source-Code)
 
