@@ -6,6 +6,29 @@ A coin-lobby and multi-mode poker project reference with login, SNG and event sc
 
 **Texas Holdem game source code · Unity poker source code · poker lobby source code · multiplayer poker game**
 
+## Project Highlights
+
+- Covers the mobile product flow from login and coin lobby to game selection, promotions and poker tables.
+- Presents coin games, private tables, clubs, SNG, MTT and additional poker-mode entry points.
+- Uses Unity C# and Lua UI adapters for extensible lobby lists, tables and event screens.
+- Includes C++ asynchronous callbacks for login, logout, user data, user state and server mapping.
+- Shows real product screens for mobile login, lobby rewards and SNG selection.
+
+## Core Features
+
+| Module | Product capability |
+|---|---|
+| Account and login | Mobile login, user state, asynchronous login and logout callbacks |
+| Coin lobby | Multiple stakes, buy-in tiers, quick table entry and promotion access |
+| Texas Holdem | Bet, call, raise, fold, all-in and settlement flow |
+| Private games and clubs | Friend tables, club rooms, member and game-history entry points |
+| SNG and MTT | Sit-and-go and multi-table tournament selection and registration UI |
+| Variant entry points | Product material for Short Deck, Omaha and further extensions |
+| Unity/Lua UI | List, table and generic UI-object adapters |
+| C++ callbacks | Login, user data, state and user-server mapping callbacks |
+
+This table describes the presented product scope. Public source coverage is documented separately in the source table and `BUILD-SCOPE.md`.
+
 ## What this repository presents
 
 ### Lobby and game modes

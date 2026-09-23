@@ -1,159 +1,109 @@
-# 德州扑克源码（德州源码）｜金币大厅、多玩法与 Unity UI 资料|Texas Hold'em Poker Source Code
+# 德州扑克金币大厅源码｜Unity + Lua UI 与 C++ 登录回调
 
-> 中文简体 · 中文繁體 · English 多语言产品与源码资料
+> Texas Holdem Game Source Code · 德州源码 · 德州撲克源碼 · Poker Lobby Source Code
 
-[简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [产品页面](https://niubideren111.github.io/Texas-Holdem-Game-Source-Code/zh-cn/)
+[简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [图文产品页](https://niubideren111.github.io/Texas-Holdem-Game-Source-Code/zh-cn/)
 
-以金币大厅和多玩法入口为主题的德州扑克项目资料，展示登录、SNG 选场和宝箱等界面。公开代码包含 Unity C# 与 Lua UI 适配器、签名工具和服务器异步回调片段。
+这是一个面向**德州扑克金币大厅、移动端登录和玩法入口**的公开源码资料仓库。仓库提供 Unity C# / Lua UI 适配器、签名工具、C++ 异步登录与用户状态回调，以及可核对的产品界面截图，适合研究德州扑克客户端 UI 桥接和服务端回调结构。
 
-**德州扑克源码 · 德州源码 · 德州金币大厅源码 · Unity扑克源码**
-支持经典德州、短牌、奥马哈等多种玩法，包含私人局、朋友局、俱乐部/联盟、SNG、MTT 等模式。
+![德州扑克金币大厅活动界面](docs/assets/seo/texas-holdem-game-source-code-01.jpg)
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/niubideren111/Texas-Hold-em-source-code)](https://github.com/niubideren111/Texas-Hold-em-source-code/stargazers)
+## 项目亮点
 
----
+- **完整德州扑克产品形态**：从账号登录、金币大厅、玩法选场到牌桌对局，覆盖移动端玩家的主要使用流程。
+- **大厅与多玩法入口**：展示金币场、SNG、MTT、私人局和俱乐部等产品入口与买入档位设计。
+- **Unity + Lua UI 架构**：通过 C# Adapter 连接 Lua 业务界面，适合大厅列表、牌桌列表和活动页面扩展。
+- **C++ 异步服务回调**：提供登录、登出、用户信息、用户状态和服务器映射回调参考。
+- **真实产品截图**：公开登录、金币大厅活动和 SNG 选场界面，便于评估产品风格与交互结构。
+- **多语言资料**：提供简体中文、繁体中文和英文 README 与 GitHub Pages 产品页。
 
-## ✨ 项目亮点
+## 核心功能
 
-- **服务器权威架构**：所有核心逻辑（发牌、胜负判定、行为验证）均在服务端执行，有效防止外挂与作弊
-- **高并发低延迟**：基于 WebSocket 实时通信，支持数百人同时在线对战
-- **多玩法支持**：经典德州（9人/6人桌）、短牌、奥马哈等
-- **丰富模式**：金币场、私人局、朋友局、俱乐部、联盟、SNG、MTT 锦标赛
-- **AI 机器人**：内置智能 Bot，便于测试与桌位填充
-- **技术栈**：C++ 高性能服务端 + Unity 2019+ 客户端 + MySQL + Redis + Docker
-
-> **重要声明**：本项目**仅供学习、研究和二次开发使用**。严格禁止用于任何真实货币赌博活动。商业使用请严格遵守当地法律法规，作者不承担任何法律责任。
-
----
-
-## 📖 目录
-
-- [快速开始](#快速开始)
-- [核心功能](#核心功能)
-- [技术架构](#技术架构)
-- [二次开发建议](#二次开发建议)
-- [未来路线图](#未来路线图)
-- [联系方式](#联系方式)
-
----
-
-## 🚀 快速开始
-
-### Docker 一键部署（推荐）
-
-
-git clone https://github.com/niubideren111/Texas-Hold-em-source-code.git
-cd Texas-Hold-em-source-code
-docker-compose up -d
-
-源码编译运行（Linux）
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
-./poker_server
----
-
-## ✨ Features | 核心功能 | 功能特色
-
-* ✅ Texas Hold'em gameplay ｜ 德州玩法 ｜ 德州玩法
-* ✅ Multiplayer real-time ｜ 实时对战 ｜ 即時對戰
-* ✅ Table management ｜ 牌桌管理 ｜ 牌桌管理
-* ✅ Stable game server ｜ 稳定服务端 ｜ 穩定服務端
-* ✅ Scalable architecture ｜ 可扩展 ｜ 可擴展
-* ✅ High-performance engine ｜ 高性能引擎 ｜ 高效能引擎
-* ✅模块主要功能金币大厅快速匹配、多级别桌、坐满即玩、
-* ✅每日比赛俱乐部/私人局好友约局、俱乐部管理、战绩统计、联盟系统
-* ✅锦标赛系统SNG、MTT、多桌锦标赛、赏金赛特色玩法
-* ✅经典德州、短牌、奥马哈等社交系统
-* ✅语音聊天、好友系统、表情互动
-* ✅安全与日志服务器反作弊、完整行为日志、数据分析
-## 💰 Commercial Features | 商业能力 | 商業能力
-
-- ✔ Payment & recharge system（充值系统）  
-- ✔ Multi-language support（多语言支持）  
-- ✔ Multi-currency support（多货币支持）  
-- ✔ Referral / agent system（代理体系）  
-- ✔ Player interaction & chat（互动聊天） 
----
-##🛠 技术架构
-
-服务端：C++ 高并发框架（WebSocket）
-客户端：Unity 2019+（C#），支持 Android / iOS / PC
-数据库：MySQL（持久化） + Redis（缓存、实时数据）
-部署：Docker + docker-compose，支持水平扩展
-通信协议：WebSocket（二进制/JSON 可选）
-
----
-
-
-###📈 未来路线图
-
-  * 完善 SNG/MTT 完整锦标赛流程
-  * 支持更多扑克变体（奥马哈 Hi/Lo 等） 
-  *  分布式部署与 Redis Cluster 集成 
-  *  WebGL / HTML5 客户端示例 
- *  更完善的后台管理系统 
-
-## 项目咨询
-
-- Telegram：[fox_lovemyself](https://t.me/fox_lovemyself)
-- GitHub：[德州私人局与朋友局源码](https://github.com/niubideren111/Texas-Hold-em-source-code)
-
-
-
-## 📸 Screenshots | 项目展示 | 專案展示
-
-![德州扑克金币大厅宝箱活动界面](docs/assets/seo/texas-holdem-game-source-code-01.jpg)
-
-![德州扑克 SNG 选场与买入档位](docs/assets/seo/texas-holdem-game-source-code-02.jpg)
-
-![德州扑克手机号登录界面](docs/assets/seo/texas-holdem-game-source-code-03.jpg)
-
----
-## 公开源码与资料
-
-| 文件 | 说明 |
+| 功能模块 | 产品能力 |
 |---|---|
-| [LuaOSAListAdapter.cs](LuaOSAListAdapter.cs) | Lua 列表适配器 |
-| [LuaOSATableAdapter.cs](LuaOSATableAdapter.cs) | Lua 表格适配器 |
-| [LuaUIObject.cs](LuaUIObject.cs) | Lua UI 对象桥接 |
-| [SignatureTool.cs](SignatureTool.cs) | 签名工具类 |
-| [external/AsyncLoginCallback.cpp](external/AsyncLoginCallback.cpp) | 服务端登录回调片段 |
+| **账号与登录** | 手机号登录、用户状态处理、登录与登出异步回调 |
+| **金币大厅** | 多级别选场、买入档位、快速进入牌桌和大厅活动入口 |
+| **经典德州** | 玩家入桌、下注、跟注、加注、弃牌、All-in 和结算流程 |
+| **私人局 / 朋友局** | 好友组局、自定义牌桌参数和房间入口 |
+| **俱乐部体系** | 俱乐部牌桌、成员组局、战绩与社交入口 |
+| **SNG / MTT** | 单桌赛、多桌锦标赛、选场和报名买入界面 |
+| **特色玩法入口** | 产品资料展示短牌、奥马哈等玩法扩展方向 |
+| **活动与奖励** | 宝箱、福利活动和大厅运营入口 |
+| **社交体验** | 好友、聊天、表情及牌桌互动的产品扩展空间 |
+| **多语言与多端** | Unity 移动端架构，可用于 Android/iOS 客户端适配研究 |
 
-## 获取仓库
+## 核心特色
+
+1. **面向真实移动端大厅体验**：界面不是单一牌型 Demo，而是包含登录、选场、活动和赛事入口的完整产品设计参考。
+2. **客户端与服务端资料并列**：既有 Unity/Lua UI 适配代码，也有 C++ 用户服务回调，便于理解前后端衔接。
+3. **适合二次开发评估**：源码地图明确标出每个公开文件的职责，可快速判断哪些模块能够复用。
+4. **功能描述与公开范围分离**：上表说明产品展示能力；实际公开代码覆盖程度以“公开源码地图”和 `BUILD-SCOPE.md` 为准。
+
+## 产品截图
+
+| 金币大厅活动 | SNG 选场与买入 | 手机号登录 |
+|---|---|---|
+| ![德州扑克金币大厅宝箱活动](docs/assets/seo/texas-holdem-game-source-code-01.jpg) | ![德州扑克 SNG 选场和买入档位](docs/assets/seo/texas-holdem-game-source-code-02.jpg) | ![德州扑克移动端手机号登录](docs/assets/seo/texas-holdem-game-source-code-03.jpg) |
+
+## 公开源码地图
+
+| 路径 | 内容 |
+|---|---|
+| [`LuaUIObject.cs`](LuaUIObject.cs) | Lua UI 对象桥接 |
+| [`LuaOSAListAdapter.cs`](LuaOSAListAdapter.cs) | Lua 列表适配器 |
+| [`LuaOSATableAdapter.cs`](LuaOSATableAdapter.cs) | Lua 表格适配器 |
+| [`SignatureTool.cs`](SignatureTool.cs) | 客户端签名辅助工具 |
+| [`external/AsyncLoginCallback.cpp`](external/AsyncLoginCallback.cpp) | C++ 异步登录回调 |
+| [`external/AsyncGetUserCallback.cpp`](external/AsyncGetUserCallback.cpp) | 用户信息回调 |
+| [`external/AsyncUserServerMapCallback.cpp`](external/AsyncUserServerMapCallback.cpp) | 用户服务器映射回调 |
+
+完整说明见 [SOURCE-MAP.md](SOURCE-MAP.md)。
+
+## 适合谁阅读
+
+- 研究 Unity 德州扑克大厅 UI 的开发者。
+- 需要了解 C# 与 Lua UI 适配方式的客户端工程师。
+- 需要参考 C++ 异步登录和用户状态回调的服务端工程师。
+- 评估金币大厅、登录流程和 SNG 入口的产品人员。
+
+## 开始阅读
 
 ```bash
-git clone https://github.com/niubideren111/Texas-Hold-em-source-code.git
-cd Texas-Hold-em-source-code
+git clone https://github.com/niubideren111/Texas-Holdem-Game-Source-Code.git
+cd Texas-Holdem-Game-Source-Code
 ```
 
-克隆后从上面的文件入口开始阅读。若需要运行示例，请先核对项目中实际存在的依赖、版本、配置和启动脚本。
+建议先查看截图，再依次阅读 `LuaUIObject.cs`、两个 OSA Adapter 和 `external/AsyncLoginCallback.cpp`。构建前请阅读 [BUILD-SCOPE.md](BUILD-SCOPE.md)。
+
+## 公开范围说明
+
+当前公开仓库是**可阅读的源码与产品资料集合**，并非包含全部 Unity Assets、完整服务集群、数据库脚本和生产配置的一键部署工程。因此不承诺通过 Docker、CMake 或单条命令即可启动完整游戏。
+
+## 与其他项目的区别
+
+- 本仓库：金币大厅、登录、SNG 入口、Unity/Lua UI 与登录回调。
+- [德州私人局与朋友局源码](https://github.com/niubideren111/Texas-Hold-em-source-code)：私人房间和朋友组局。
+- [德州俱乐部源码](https://github.com/niubideren111/dezhou-poker-club-source-code)：俱乐部、联盟和牌桌。
+- [德州锦标赛源码](https://github.com/niubideren111/Texas-Hold-em-Tournament-Source-Code)：MTT、SNG 和比赛资料。
 
 ## 常见问题
 
-### 本项目与私人局项目有何不同？
+### 这是完整可运行的德州扑克项目吗？
 
-本页突出金币大厅、玩法选择和 Unity UI 代码；私人局项目侧重组局、俱乐部牌桌和场景资料。
+公开仓库包含 UI 适配器、工具类、服务端回调片段和产品截图。可独立构建范围以 [BUILD-SCOPE.md](BUILD-SCOPE.md) 为准。
 
-### 从哪个文件了解客户端界面？
+### 这是德州俱乐部源码吗？
 
-从 LuaUIObject.cs 入手，再阅读列表和表格适配器，了解 C# 与 Lua 界面的连接方式。
+本仓库主要展示金币大厅和玩法入口。俱乐部需求请访问上方独立仓库，以减少同账号项目间的关键词竞争。
 
-## 后续资料完善方向
+## 文档、许可与联系
 
-补充登录到大厅的流程图、玩法入口截图、UI 适配器用法和 Unity 版本说明；独立列出 SNG/MTT 的实现范围。 后续更新还应加入版本化依赖清单、经过验证的构建或导入步骤、简明架构/产品流程图，以及能对应真实文件变化的版本记录。大型授权资源可放入 GitHub Releases 并提供校验值，不能提交密钥、生产地址或用户数据。
+- [源码地图](SOURCE-MAP.md)
+- [公开范围与构建条件](BUILD-SCOPE.md)
+- [贡献说明](CONTRIBUTING.md)
+- [安全说明](SECURITY.md)
+- [许可证](LICENSE)
 
-## 相关项目
+本项目用于软件工程学习、架构研究和合法二次开发。涉及线上服务、支付或用户数据时，请遵守适用法律、平台规则和隐私要求。
 
-- [Texas-Hold-em-source-code](https://github.com/niubideren111/Texas-Hold-em-source-code)
-- [dezhou-poker-club-source-code](https://github.com/niubideren111/dezhou-poker-club-source-code)
-- [Texas-Hold-em-Tournament-Source-Code](https://github.com/niubideren111/Texas-Hold-em-Tournament-Source-Code)
-
-## 资料范围与许可
-
-公开仓库提供 UI 适配代码、工具类、服务器回调片段及产品截图；完整客户端、服务端和数据配置通过项目联系方式沟通。 公开内容以实际文件、依赖和许可为准，不承诺搜索排名、直接上线或固定性能结果。
-
-- Telegram: [@fox_lovemyself](https://t.me/fox_lovemyself)
-- GitHub: [Texas-Holdem-Game-Source-Code](https://github.com/niubideren111/Texas-Holdem-Game-Source-Code)
-
+Telegram: [@fox_lovemyself](https://t.me/fox_lovemyself) · GitHub: [niubideren111](https://github.com/niubideren111)
